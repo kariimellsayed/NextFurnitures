@@ -8,8 +8,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#000000",
+        secondary: "#F43F5E",
+      },
+      screens: {
+        tap: "992px",
+      },
+      boxShadow: {
+        "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",
       },
     },
   },
