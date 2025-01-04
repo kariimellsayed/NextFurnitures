@@ -1,13 +1,16 @@
+import { IoHome } from "react-icons/io5";
+import { LuShoppingBasket } from "react-icons/lu";
+
 // NavLinks
 export const navLinks = [
   {
     href: "/",
-    title: "Home",
+    title: <IoHome className="flex-center" size={30} />,
   },
-  // {
-  //   href: "/explore",
-  //   title: "Explore",
-  // },
+  {
+    href: "/all",
+    title: <LuShoppingBasket className="flex-center" size={30} />,
+  },
   // {
   //   href: "/projects",
   //   title: "Projects",

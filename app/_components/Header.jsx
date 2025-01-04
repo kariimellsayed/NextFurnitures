@@ -50,13 +50,10 @@ const Header = () => {
         <div className="flex flex-1 items-center justify-end md:justify-between">
           <nav className="hidden tap:block ml-10">
             <ul className="flex items-center tap:gap-6 gap-3 text-sm">
-              {navLinks.map((link) => (
-                <li key={link.title}>
+              {navLinks.map((link, idx) => (
+                <li key={idx}>
                   {pathName === link.href ? (
-                    <Link
-                      href={link.href}
-                      className="font-bold text-gray-500 text-[16px] border-b-2 border-gray-500"
-                    >
+                    <Link href={link.href} className="text-gray-500">
                       {link.title}
                     </Link>
                   ) : (
@@ -146,8 +143,8 @@ const Header = () => {
           <IoIosCloseCircle />
         </button>
         <ul className="flex flex-col gap-4 mt-10">
-          {navLinks.map((link) => (
-            <li key={link.title}>
+          {navLinks.map((link, idx) => (
+            <li key={idx}>
               {pathName === link.href ? (
                 <Link
                   href={link.href}

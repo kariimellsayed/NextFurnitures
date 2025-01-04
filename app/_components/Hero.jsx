@@ -26,10 +26,10 @@ const Hero = () => {
               Get Started
             </Link>
             <Link
-              href="#footer"
+              href="/all"
               className="px-7 py-2 text-white rounded-lg font-semibold bg-gray-400"
             >
-              Learn More
+              More Furnitures
             </Link>
           </div>
         </div>

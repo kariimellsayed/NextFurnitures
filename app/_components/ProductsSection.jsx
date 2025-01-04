@@ -6,7 +6,7 @@ import Loading from "./loading";
 
 const ProductsSection = () => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true); // حالة تحميل البيانات
+  const [loading, setLoading] = useState(true); // products Loading
 
   useEffect(() => {
     getProducts();
@@ -15,7 +15,7 @@ const ProductsSection = () => {
   const getProducts = () => {
     ProductsApis.ProductsGetLest()
       .then((res) => {
-        setProducts(res.data.data);
+        setProducts(res.data.data.slice(0, 8));
         setLoading(false);
       })
       .catch((error) => {
