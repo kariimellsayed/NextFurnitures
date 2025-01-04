@@ -1,4 +1,3 @@
-// الصفحة Home
 import Hero from "./_components/Hero";
 import ProductsSection from "./_components/ProductsSection";
 

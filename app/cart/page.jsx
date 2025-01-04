@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart } from "../_features/cartSlice";
 import CartApis from "../_utils/CartApis";
 import { loadStripe } from "@stripe/stripe-js";
+import Head from "next/head"; // استيراد Head من Next.js
+import Loading from "../_components/loading";
 
 // تهيئة stripe باستخدام الـ public key
 const stripePromise = loadStripe(
@@ -59,6 +61,17 @@ const CartPage = () => {
     }
   };
 
+  if (loading) {
+    return <Loading screen={"w-full h-screen"} />;
+  }
+
+  if (error) {
+    return (
+      <>
+        <h1>Error In Products</h1>
+      </>
+    );
+  }
   return (
     <section className="min-h-screen bg-gray-100 py-10 px-5">
       <div className="max-w-5xl mx-auto bg-white shadow-md rounded-lg p-6">
